@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex01</title>
+</head>
+<body>
+<script>
+    var toan=parseFloat(prompt("moi nhap vao diem mon Toan: "));
+    var van=parseFloat(prompt("moi nhap vao diem mon Van: "));
+    var anh=parseFloat(prompt("moi nhap vao diem mon Anh: "));
+    while (toan<0 || toan>10){
+        toan=parseFloat(prompt("moi nhap lai diem mon Toan: "));
+    }
+    while (van<0 || van>10){
+        van=parseFloat(prompt("moi nhap lai diem mon Van: "));
+    }
+    while (anh<0 || anh>10){
+        anh=parseFloat(prompt("moi nhap lai diem mon Anh: "));
+    }
+    var average=parseFloat((toan*2+van+anh*2)/5);
+    var rank;
+    if (average<5) {
+        rank="Khong dat";
+    } else if (average<7.5) {
+        rank="Dat";
+    } else if (average<8.5) {
+        rank="Kha";
+    } else {
+        rank="Tot";
+    }
+    alert("Diem trung binh la: "+average+", xep loai: "+rank);
+</script>
+</body>
+</html>

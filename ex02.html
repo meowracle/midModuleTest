@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex02</title>
+</head>
+<body>
+Moi nhap vao 1 so de kiem tra: <input id="num" type="number">
+<button id="btn" onclick="check()">Click to check</button>
+<script>
+    function check() {
+        var n = parseInt(document.getElementById("num").value);
+        if (n == 2) {
+            alert("so nhap vao la so nguyen to");
+        } else {
+            for (i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    alert("so nhap vao khong phai la so nguyen to");
+                    break;
+                } else{
+                    alert("so nhap vao la so nguyen to");
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
